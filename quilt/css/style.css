@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.quilt-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 2px;
+    background-color: #000;
+}
+
+.square {
+    background-color: #ff0000;
+    border-radius: 0;
+    opacity: 0.9;
+}
+
+.rectangle {
+    background-color: #0000ff;
+    border-radius: 0;
+    opacity: 0.8;
+}
+
+.circle {
+    background-color: #00ff00;
+    border-radius: 50%;
+    opacity: 0.85;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #ffff00;
+    opacity: 0.9;
+}
+
+.diamond {
+    background-color: #ff00ff;
+    transform: rotate(45deg);
+    opacity: 0.8;
+}
+
+.square.red { background-color: #ff0000; }
+.square.purple { background-color: #800080; }
+.square.cyan { background-color: #00ffff; }
+.square.gold { background-color: #ffd700; }
+.square.teal { background-color: #008080; }
+.square.olive { background-color: #808000; }
+.square.forest { background-color: #228b22; }
+.square.maroon { background-color: #800000; }
+.square.mint { background-color: #98fb98; }
+.square.steel { background-color: #4682b4; }
+
+.rectangle.blue { background-color: #0000ff; }
+.rectangle.orange { background-color: #ffa500; }
+.rectangle.magenta { background-color: #ff00ff; }
+.rectangle.coral { background-color: #ff7f50; }
+.rectangle.salmon { background-color: #fa8072; }
+.rectangle.lavender { background-color: #e6e6fa; }
+.rectangle.plum { background-color: #dda0dd; }
+
+.circle.green { background-color: #00ff00; }
+.circle.lime { background-color: #00ff00; }
+.circle.indigo { background-color: #4b0082; }
+.circle.turquoise { background-color: #40e0d0; }
+.circle.orchid { background-color: #da70d6; }
+
+.triangle.yellow { border-bottom-color: #ffff00; }
+.triangle.navy { border-bottom-color: #000080; }
+.triangle.crimson { border-bottom-color: #dc143c; }
+.triangle.tomato { border-bottom-color: #ff6347; }
+.triangle.sienna { border-bottom-color: #a0522d; }
+
+.diamond.pink { background-color: #ffc0cb; }
+.diamond.violet { background-color: #8a2be2; }
+.diamond.chocolate { background-color: #d2691e; }
+
+@media (max-width: 768px) {
+    .quilt-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .quilt-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+    }
+}
