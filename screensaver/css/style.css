@@ -1,0 +1,229 @@
+:root {
+  --bg: #0b1020;
+  --text: #e7ecff;
+  --muted: #9aa3c7;
+  --accent: #67e8f9;
+  --accent-2: #f0abfc;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: radial-gradient(80% 120% at 50% 0%, #070a18 0%, #0b1020 65%, #070a18 100%);
+  transition: background 800ms ease;
+}
+
+.wrapper { min-height: 100dvh; }
+
+.scene {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 0;
+  border: none;
+  background: radial-gradient(70% 90% at 50% 40%, rgba(103,232,249,0.08), rgba(240,171,252,0.05) 55%, transparent 100%);
+  transition: background 600ms ease, filter 600ms ease;
+}
+
+.field { position: relative; width: 140%; height: 140%; }
+
+.stars,
+.stars::before,
+.stars::after {
+  position: absolute;
+  inset: -10%;
+  content: "";
+  background-repeat: repeat;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, #ffffffb3 40%, transparent 41%),
+    radial-gradient(1px 1px at 30% 80%, #ffffff99 40%, transparent 41%),
+    radial-gradient(1.5px 1.5px at 80% 30%, #ffffffb3 40%, transparent 41%),
+    radial-gradient(1px 1px at 60% 50%, #ffffff8c 40%, transparent 41%),
+    radial-gradient(1.5px 1.5px at 15% 60%, #ffffff99 40%, transparent 41%),
+    radial-gradient(0.6px 0.6px at 5% 10%, #ffffffcc 40%, transparent 41%),
+    radial-gradient(0.6px 0.6px at 25% 30%, #ffffffb3 40%, transparent 41%),
+    radial-gradient(0.6px 0.6px at 45% 70%, #ffffffcc 40%, transparent 41%),
+    radial-gradient(0.6px 0.6px at 65% 40%, #ffffffb3 40%, transparent 41%),
+    radial-gradient(0.6px 0.6px at 85% 85%, #ffffffcc 40%, transparent 41%),
+    radial-gradient(0.6px 0.6px at 12% 88%, #ffffffcc 40%, transparent 41%),
+    radial-gradient(0.6px 0.6px at 72% 12%, #ffffffb3 40%, transparent 41%),
+    radial-gradient(0.6px 0.6px at 92% 22%, #ffffffcc 40%, transparent 41%);
+  opacity: .6;
+  z-index: 0;
+}
+.stars { animation: starPan 120s linear infinite; background-size: 400px 400px; }
+.stars--2 { opacity: .35; animation: starPan 180s linear infinite; filter: blur(0.5px); background-size: 300px 300px; }
+.stars--3 { opacity: .2; animation: starPan 260s linear infinite; filter: blur(1px); background-size: 250px 250px; }
+.stars::before { filter: blur(.7px); opacity: .75; }
+.stars::after { filter: blur(1.2px); opacity: .5; }
+
+.specks {
+  position: absolute;
+  inset: -10%;
+  z-index: 2;
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  background-image:
+    radial-gradient(0.5px 0.5px at 7% 9%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 13% 63%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 28% 24%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 46% 72%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 61% 17%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 77% 55%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 89% 31%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 95% 84%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 3% 88%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 72% 6%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 19% 45%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 35% 78%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 52% 12%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 68% 89%, #ffffffe6 50%, transparent 51%),
+    radial-gradient(0.5px 0.5px at 84% 23%, #ffffffe6 50%, transparent 51%);
+  animation: starPan 120s linear infinite;
+  opacity: .6;
+}
+
+.specks--2 {
+  z-index: 2;
+  background-size: 120px 120px;
+  animation: starPan 180s linear infinite;
+  opacity: .4;
+}
+
+.specks--3 {
+  z-index: 2;
+  background-size: 100px 100px;
+  animation: starPan 260s linear infinite;
+  opacity: .3;
+}
+
+@keyframes starPan {
+  from { transform: translate3d(0,0,0) scale(1); }
+  to   { transform: translate3d(-15%, -10%, 0) scale(1.1); }
+}
+
+.orb {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  filter: blur(.25px) saturate(1.15);
+  background: radial-gradient(circle at 30% 30%, #fff8, #fff0 44%),
+              radial-gradient(circle at 70% 70%, #0004, #0000 50%);
+  box-shadow: 0 0 60px 0 currentColor;
+  opacity: .85;
+  transform: translate(-50%, -50%);
+}
+
+.orb--red   { color: #ff6b6b;   left: 20%; top: 30%; z-index: 1; }
+.orb--gold  { color: #ffd166;   left: 80%; top: 25%; width: 90px; height: 90px; z-index: 1; }
+.orb--cyan  { color: #67e8f9;   left: 70%; top: 70%; width: 140px; height: 140px; z-index: 1; }
+.orb--violet{ color: #c084fc;   left: 30%; top: 75%; width: 100px; height: 100px; z-index: 1; }
+.orb--emerald{ color: #34d399; left: 10%; top: 60%; width: 80px; height: 80px; z-index: 1; }
+.orb--blue   { color: #60a5fa; left: 55%; top: 15%; width: 70px; height: 70px; z-index: 1; }
+.orb--peach  { color: #fb7185; left: 88%; top: 80%; width: 60px; height: 60px; z-index: 1; }
+.orb--tiny   { color: #fcd34d; left: 45%; top: 90%; width: 36px; height: 36px; z-index: 1; }
+
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed rgba(255,255,255,0.25);
+  width: 80vmin;
+  height: 80vmin;
+  filter: drop-shadow(0 0 24px rgba(255,255,255,0.15));
+  opacity: .6;
+}
+.ring--inner { width: 48vmin; height: 48vmin; opacity: .45; }
+
+.comet {
+  position: absolute;
+  left: 120%;
+  top: -20%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 0 12px 4px #fff,
+    -18px 4px 0 -2px rgba(255,255,255,0.5),
+    -36px 8px 0 -4px rgba(255,255,255,0.35),
+    -58px 12px 0 -6px rgba(255,255,255,0.2);
+  opacity: .9;
+  transform: translate(-50%, -50%);
+  animation: cometFly 9s cubic-bezier(.2,.8,.2,1) infinite;
+}
+
+@keyframes cometFly {
+  0% { transform: translate(-50%, -50%) translate(0,0) rotate(12deg); opacity: 0; }
+  10% { opacity: 1; }
+  60% { transform: translate(-50%, -50%) translate(-180vmin, 120vmin) rotate(12deg); opacity: .9; }
+  100% { transform: translate(-50%, -50%) translate(-180vmin, 120vmin) rotate(12deg); opacity: 0; }
+}
+
+.scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 140% at 50% -10%, transparent 0 48%, rgba(0,0,0,0.25) 65%, rgba(0,0,0,0.45));
+  pointer-events: none;
+  opacity: .15;
+}
+
+@keyframes drift {
+  0%   { transform: translate(-50%, -50%) translateX(-10%) translateY(-6%) rotate(0deg); }
+  25%  { transform: translate(-50%, -50%) translateX(6%) translateY(-12%) rotate(90deg); }
+  50%  { transform: translate(-50%, -50%) translateX(12%) translateY(8%) rotate(180deg); }
+  75%  { transform: translate(-50%, -50%) translateX(-8%) translateY(10%) rotate(270deg); }
+  100% { transform: translate(-50%, -50%) translateX(-10%) translateY(-6%) rotate(360deg); }
+}
+
+@keyframes rotateRing { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes rotateRingReverse { from { transform: translate(-50%, -50%) rotate(360deg); } to { transform: translate(-50%, -50%) rotate(0deg); } }
+
+.scene .orb--red { transition: animation 400ms ease; }
+.scene .orb--gold { transition: animation 400ms ease; }
+.scene .orb--cyan { transition: animation 400ms ease; }
+.scene .orb--violet { transition: animation 400ms ease; }
+.scene .orb--emerald { transition: animation 400ms ease; }
+.scene .orb--blue { transition: animation 400ms ease; }
+.scene .orb--peach { transition: animation 400ms ease; }
+.scene .orb--tiny { transition: animation 400ms ease; }
+
+.scene .ring--outer { transition: animation 400ms ease; }
+.scene .ring--inner { transition: animation 400ms ease; }
+
+.scene:hover .orb--red { animation: drift 22s linear infinite; animation-delay: -3s; }
+.scene:hover .orb--gold { animation: drift 18s linear infinite; animation-delay: -6s; }
+.scene:hover .orb--cyan { animation: drift 28s linear infinite; animation-delay: -12s; }
+.scene:hover .orb--violet { animation: drift 24s linear infinite; }
+.scene:hover .orb--emerald { animation: drift 26s linear infinite; animation-delay: -9s; }
+.scene:hover .orb--blue { animation: drift 32s linear infinite; animation-delay: -15s; }
+.scene:hover .orb--peach { animation: drift 16s linear infinite; animation-delay: -2s; }
+.scene:hover .orb--tiny { animation: drift 12s linear infinite; animation-delay: -1s; }
+
+.scene:hover .ring--outer { animation: rotateRing 30s linear infinite; }
+.scene:hover .ring--inner { animation: rotateRingReverse 50s linear infinite; }
+
+.scene:hover {
+  background: radial-gradient(70% 90% at 50% 40%, rgba(103,232,249,0.15), rgba(240,171,252,0.1) 55%, transparent 100%);
+  filter: brightness(1.1) contrast(1.05) saturate(1.2);
+}
+
+body:hover {
+  background: radial-gradient(80% 120% at 50% 0%, #050a15 0%, #080f1f 65%, #050a15 100%);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .scene .orb,
+  .scene .ring { animation: none !important; }
+}
