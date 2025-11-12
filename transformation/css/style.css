@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #2c3e50;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+    transition: all 0.5s ease;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    transition: all 0.5s ease;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #2c3e50;
+    transition: all 0.5s ease;
+}
+
+#subtitle {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    margin-top: 10px;
+    font-style: italic;
+    transition: all 0.5s ease;
+}
+
+.content-section {
+    margin: 30px 0;
+    line-height: 1.8;
+    transition: all 0.5s ease;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #34495e;
+    font-weight: 400;
+    transition: all 0.5s ease;
+}
+
+#description {
+    font-size: 1.1em;
+    color: #555;
+    transition: all 0.5s ease;
+}
+
+.instructions-section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.instructions-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+.instructions-section ul {
+    margin: 10px 0;
+    padding-left: 25px;
+    line-height: 1.8;
+}
+
+.instructions-section li {
+    margin: 8px 0;
+    color: #555;
+    transition: all 0.5s ease;
+}
+
+.instructions-section p {
+    margin: 15px 0 10px 0;
+    color: #2c3e50;
+    transition: all 0.5s ease;
+}
+
+.instructions-section.transformed {
+    background: rgba(255, 255, 0, 0.3);
+    border-left: 8px dashed #ff1744;
+    border-radius: 20px;
+    transform: rotate(-1deg);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.instructions-section.transformed h3 {
+    font-family: 'Comic Sans MS', cursive;
+    color: #ff1744;
+    font-size: 2em;
+    text-shadow: 2px 2px 0px #ffeb3b;
+    transform: rotate(2deg);
+}
+
+.instructions-section.transformed p,
+.instructions-section.transformed li {
+    font-family: 'Comic Sans MS', cursive;
+    color: #e91e63;
+    font-size: 1.2em;
+}
+
+.interactive-zone {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    gap: 20px;
+    transition: all 0.5s ease;
+}
+
+.element {
+    width: 80px;
+    height: 80px;
+    background: #3498db;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.element:hover {
+    transform: scale(1.1);
+}
+
+.action-button {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.action-button:hover {
+    background: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    transition: all 0.5s ease;
+}
+
+body.transformed {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 25%, #4facfe 50%, #00f2fe 75%, #43e97b 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container.transformed {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(255, 0, 0, 0.3), 0 0 100px rgba(255, 255, 0, 0.2);
+    transform: rotate(2deg);
+    animation: wiggle 0.5s ease infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+}
+
+header.transformed {
+    border-bottom: 5px dashed #ff6b6b;
+}
+
+h1.transformed {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 3.5em;
+    color: #ff1744;
+    text-shadow: 3px 3px 0px #ffeb3b, 6px 6px 0px #ff9800;
+    transform: rotate(-5deg);
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: rotate(-5deg) translateY(0); }
+    50% { transform: rotate(-5deg) translateY(-10px); }
+}
+
+#subtitle.transformed {
+    font-family: 'Comic Sans MS', cursive;
+    color: #ff6b6b;
+    font-size: 1.5em;
+    transform: rotate(3deg);
+}
+
+.content-section.transformed {
+    transform: rotate(-2deg);
+}
+
+h2.transformed {
+    font-family: 'Comic Sans MS', cursive;
+    color: #ff1744;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 0px #ffeb3b;
+}
+
+#description.transformed {
+    font-family: 'Comic Sans MS', cursive;
+    color: #e91e63;
+    font-size: 1.3em;
+    line-height: 2;
+}
+
+.interactive-zone.transformed {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    transform: rotate(5deg);
+}
+
+.element.transformed {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: spin 2s linear infinite, colorChange 1s ease infinite;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes colorChange {
+    0% { background: #ff1744; }
+    25% { background: #ffeb3b; }
+    50% { background: #00e676; }
+    75% { background: #2196f3; }
+    100% { background: #ff1744; }
+}
+
+.action-button.transformed {
+    background: linear-gradient(45deg, #ff1744, #ffeb3b, #00e676, #2196f3);
+    background-size: 400% 400%;
+    animation: gradientShift 2s ease infinite;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1.5em;
+    padding: 20px 50px;
+    border-radius: 50px;
+    transform: rotate(-5deg);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+}
+
+footer.transformed {
+    border-top: 5px dashed #ff6b6b;
+    color: #ff1744;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1.2em;
+    transform: rotate(2deg);
+}
+
