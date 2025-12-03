@@ -2,35 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DBZ Era — Pushing Limits</title>
+  <title>Dragon Ball Z — Pushing Limits</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="era-dbz">
 
-<h1>Dragon Ball Z — Pushing Limits</h1>
-<p>
-  Scouter Readout: Threat levels spike. Training compounds with duty. I learn to stack pain
-  into progress, to borrow tomorrow’s strength for today’s stand.
-</p>
+<div class="container">
+  <div class="page-content">
+    
+    <h1>Dragon Ball Z — Pushing Limits</h1>
 
-<h2>Transformations</h2>
-<ul>
-  <li><a href="kaioken.html">Pushing Past the Limit (Kaioken)</a></li>
-  <li><a href="ssj.html">The Golden Warrior (Super Saiyan)</a></li>
-  <li><a href="ssj2.html">The Ascended Warrior (Super Saiyan 2)</a></li>
-  <li><a href="ssj3.html">The Three-Minute Form (Super Saiyan 3)</a></li>
-  </ul>
+    <div class="scouter-log scroll-reveal">
+      [SCOUTER READOUT — MULTIPLE CONTACTS]<br>
+      Threat Level: EXTREME. Incoming: Saiyans, Frieza Force, Androids, Majin Buu.<br>
+      Status: Earth's defender. Power Level: OVER 9000... and climbing.
+    </div>
 
-<hr>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        Everything changes when Raditz arrives. I learn the truth: I'm not from Earth. I'm a 
+        Saiyan, sent here as a baby to conquer this planet. But Earth is my home, and I'll 
+        die to protect it. Literally, more than once.
+      </p>
+      <p>
+        Training compounds with duty. I learn to stack pain into progress, to borrow tomorrow's 
+        strength for today's stand. Every enemy is stronger than the last. Every transformation 
+        is a promise I make to my friends.
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-  <li><a href="db.html">Previous Era: Dragon Ball</a> | <a href="dbs.html">Next Era: Dragon Ball Super</a></li>
-  </ul>
+    <div class="card scroll-reveal delay-2">
+      <h2>The Era of Legends</h2>
+      <p>
+        This is the golden age, where legends are born and limits are shattered. The myth of 
+        the Super Saiyan becomes reality. Death is temporary. Power has no ceiling.
+      </p>
+      <ul class="stats-list">
+        <li><strong>Key Battles</strong> — Vegeta, Frieza, Cell, Majin Buu</li>
+        <li><strong>Key Allies</strong> — Gohan (my son), Vegeta (rival turned friend), Piccolo</li>
+        <li><strong>Key Theme</strong> — Sacrifice and rebirth</li>
+      </ul>
+    </div>
 
+    <h2 class="scroll-reveal delay-3">Transformations</h2>
+
+    <div class="card scroll-reveal" style="border-left: 4px solid var(--db-red);">
+      <h3 style="color: var(--db-red);">🔴 Kaioken</h3>
+      <p>Power borrowed at interest. Red aura, multiplied strength, body pushed to breaking.</p>
+      <a href="kaioken.html" class="btn btn-transform" style="margin-top: var(--space-xs);">Experience Kaioken →</a>
+    </div>
+
+    <div class="card scroll-reveal" style="border-left: 4px solid var(--ssj-gold);">
+      <h3 style="color: var(--ssj-gold);">⚡ Super Saiyan</h3>
+      <p>The legend becomes real. Golden hair ignites. Grief transforms into unstoppable power.</p>
+      <a href="ssj.html" class="btn btn-transform" style="margin-top: var(--space-xs);">Experience Super Saiyan →</a>
+    </div>
+
+    <div class="card scroll-reveal" style="border-left: 4px solid var(--ssj-gold);">
+      <h3 style="color: var(--ssj-gold);">⚡⚡ Super Saiyan 2</h3>
+      <p>Lightning stitches the air. Precision sharpens. Gohan showed the way; I followed.</p>
+      <a href="ssj2.html" class="btn btn-transform" style="margin-top: var(--space-xs);">Experience SSJ2 →</a>
+    </div>
+
+    <div class="card scroll-reveal" style="border-left: 4px solid var(--ssj-gold);">
+      <h3 style="color: var(--ssj-gold);">⚡⚡⚡ Super Saiyan 3</h3>
+      <p>Raw output with a timer. Long hair, overwhelming power, brutal stamina cost.</p>
+      <a href="ssj3.html" class="btn btn-transform" style="margin-top: var(--space-xs);">Experience SSJ3 →</a>
+    </div>
+
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">ERA POWER LEVEL</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="50"></div>
+      </div>
+    </div>
+
+    <a href="kaioken.html" class="btn btn-continue scroll-reveal">
+      Begin with Kaioken
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="db.html">← Previous Era: DB</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="dbs.html">Next Era: DBS →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

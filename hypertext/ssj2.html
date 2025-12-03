@@ -2,46 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Ascended Warrior — SSJ2</title>
+  <title>The Ascended Warrior — Super Saiyan 2</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.ssj2-active {
+      --era-primary: #FFD700;
+      --era-glow: 0 0 40px rgba(255, 215, 0, 0.7);
+    }
+    body.ssj2-active .transformation-image img {
+      box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.9),
+        0 0 40px rgba(255, 215, 0, 0.7),
+        0 0 60px rgba(255, 215, 0, 0.5);
+      animation: ssj2Lightning 0.15s infinite;
+    }
+    @keyframes ssj2Lightning {
+      0%, 100% {
+        box-shadow: 
+          0 0 20px rgba(255, 215, 0, 0.9),
+          0 0 40px rgba(255, 215, 0, 0.7),
+          0 0 60px rgba(255, 215, 0, 0.5),
+          -5px -5px 15px rgba(135, 206, 250, 0.8),
+          5px 5px 15px rgba(135, 206, 250, 0.8);
+      }
+      25% {
+        box-shadow: 
+          0 0 25px rgba(255, 215, 0, 1),
+          0 0 50px rgba(255, 215, 0, 0.8),
+          0 0 70px rgba(255, 215, 0, 0.6),
+          10px -8px 20px rgba(173, 216, 230, 1),
+          -8px 10px 8px rgba(135, 206, 250, 0.4);
+      }
+      50% {
+        box-shadow: 
+          0 0 20px rgba(255, 215, 0, 0.9),
+          0 0 40px rgba(255, 215, 0, 0.7),
+          0 0 60px rgba(255, 215, 0, 0.5),
+          8px 8px 12px rgba(173, 216, 230, 0.9),
+          -10px -5px 18px rgba(135, 206, 250, 0.7);
+      }
+      75% {
+        box-shadow: 
+          0 0 30px rgba(255, 215, 0, 1),
+          0 0 55px rgba(255, 215, 0, 0.85),
+          0 0 75px rgba(255, 215, 0, 0.65),
+          -12px 6px 15px rgba(135, 206, 250, 1),
+          6px -12px 10px rgba(173, 216, 230, 0.5);
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="era-dbz">
 
-<h1>The Ascended Warrior (Super Saiyan 2)</h1>
-<pre>[CELL GAMES TAPES] 12:09 — Arena rubble
-Gohan breaks through first. Lightning stitches the air. I study the rhythm: less rage,
-more precision. When I step into it, the current holds.
-</pre>
+<div class="container">
+  <div class="page-content">
+    
+    <h1 style="color: var(--ssj-gold);">The Ascended Warrior</h1>
+    <h2 style="color: var(--text-muted); margin-top: calc(var(--space-sm) * -1);">Super Saiyan 2</h2>
 
-<p>
-  Training Log — SSJ2 sharpens everything. Movement finds its answer before doubt
-  speaks. The crackle in the aura is a metronome for intent.
-</p>
+    <div class="scouter-log scroll-reveal" style="border-left-color: var(--ssj-gold);">
+      [CELL GAMES TAPES] 12:09 — Arena rubble<br>
+      Subject: Gohan. Age: 11. Event: Surpassed his father.<br>
+      Lightning stitches the air. Power output: UNPRECEDENTED.
+    </div>
 
-<ul>
-  <li><strong>Model</strong>: Inspired by Gohan’s breakthrough vs. Cell</li>
-  <li><strong>Traits</strong>: Electric arcs, faster response, tighter control</li>
-  <li><strong>Arc</strong>: Stepping stone toward the unsustainable SSJ3</li>
-</ul>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        Gohan breaks through first. My son, pushed beyond his breaking point by Cell, 
+        ascends to something I hadn't reached. I watch with pride and take notes.
+      </p>
+      <p>
+        When I step into SSJ2 myself, I understand: this isn't just more power. The 
+        lightning arcs in the aura are a metronome for <em>precision</em>. Every movement 
+        finds its answer before doubt speaks.
+      </p>
+    </div>
 
+    <div class="transformation-display scroll-reveal delay-2">
+      <div class="transformation-image">
+        <img src="images/ssj2.jpg" alt="Electric arcs snap around a sharpened golden aura in SSJ2">
+        <div class="aura-effect" style="box-shadow: 0 0 50px rgba(255, 215, 0, 0.7), 0 0 100px rgba(255, 215, 0, 0.5);"></div>
+      </div>
+      <figcaption>Sharper edge, steadier hand.</figcaption>
+    </div>
 
+    <button class="btn btn-transform scroll-reveal delay-3" data-transform="ssj2" onclick="this.classList.toggle('active'); document.body.classList.toggle('ssj2-active');">
+      ⚡⚡ Ascend to SSJ2
+    </button>
 
-<figure>
-  <img src="images/ssj2.jpg" alt="Electric arcs snap around a sharpened golden aura—SSJ2.">
-  <figcaption>Sharper edge, steadier hand.</figcaption>
-</figure>
+    <div class="card scroll-reveal delay-3" style="border-left-color: var(--ssj-gold);">
+      <h3 style="color: var(--ssj-gold);">Transformation Data</h3>
+      <ul class="stats-list">
+        <li><strong>Pioneer</strong> — Gohan was first (vs. Cell)</li>
+        <li><strong>Traits</strong> — Electric arcs in aura, spikier hair, faster response</li>
+        <li><strong>Power</strong> — 2x Super Saiyan (100x base)</li>
+        <li><strong>Edge</strong> — Tighter control, more efficient energy use</li>
+      </ul>
+    </div>
 
-<hr>
+    <div class="card scroll-reveal delay-4" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), transparent);">
+      <h3>The Stepping Stone</h3>
+      <p>
+        SSJ2 becomes the comfortable middle ground. More controlled than raw Super Saiyan, 
+        more sustainable than what comes next. Against Majin Vegeta, we clash at this 
+        level as equals, two warriors who've walked the same path.
+      </p>
+      <p style="color: var(--text-muted);">
+        But sometimes comfortable isn't enough. Sometimes you need to push further, 
+        even if your body can't hold it for long...
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="dbz.html">Back to DBZ Era</a></li>
-  <li><a href="ssj.html">Previous: Super Saiyan</a> | <a href="ssj3.html">Next: Super Saiyan 3</a></li>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-</ul>
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">TRANSFORMATION POWER</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="55"></div>
+      </div>
+    </div>
 
+    <a href="ssj3.html" class="btn btn-continue scroll-reveal">
+      Continue to Super Saiyan 3
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="dbz.html">← Back to DBZ Era</a></li>
+        <li><a href="ssj.html">Previous: SSJ</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="ssj3.html">Next: SSJ3 →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

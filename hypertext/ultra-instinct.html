@@ -4,48 +4,174 @@
   <meta charset="UTF-8">
   <title>A State of Mind — Ultra Instinct</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.ui-active {
+      --era-primary: #CBD5E0;
+      --era-glow: 0 0 60px rgba(203, 213, 224, 0.8);
+    }
+    body.ui-active .transformation-image img {
+      box-shadow: 
+        0 0 25px rgba(203, 213, 224, 0.9),
+        0 0 50px rgba(203, 213, 224, 0.7),
+        0 0 75px rgba(203, 213, 224, 0.5);
+      animation: uiEthereal 3s ease-in-out infinite;
+    }
+    @keyframes uiEthereal {
+      0%, 100% {
+        box-shadow: 
+          0 0 25px rgba(203, 213, 224, 0.9),
+          0 0 50px rgba(203, 213, 224, 0.7),
+          0 0 75px rgba(203, 213, 224, 0.5),
+          0 0 100px rgba(255, 255, 255, 0.2);
+      }
+      25% {
+        box-shadow: 
+          0 0 30px rgba(220, 220, 235, 1),
+          0 0 60px rgba(203, 213, 224, 0.8),
+          0 0 90px rgba(230, 230, 240, 0.6),
+          0 0 120px rgba(255, 255, 255, 0.3),
+          0 -15px 50px rgba(200, 200, 220, 0.4);
+      }
+      50% {
+        box-shadow: 
+          0 0 35px rgba(230, 230, 245, 1),
+          0 0 70px rgba(203, 213, 224, 0.85),
+          0 0 105px rgba(220, 220, 235, 0.65),
+          0 0 140px rgba(255, 255, 255, 0.35),
+          0 -20px 60px rgba(210, 210, 230, 0.5);
+      }
+      75% {
+        box-shadow: 
+          0 0 30px rgba(215, 215, 230, 1),
+          0 0 55px rgba(203, 213, 224, 0.8),
+          0 0 85px rgba(225, 225, 240, 0.6),
+          0 0 115px rgba(255, 255, 255, 0.3),
+          0 -12px 45px rgba(205, 205, 225, 0.45);
+      }
+    }
+    body.ui-active::before {
+      background-image: 
+        radial-gradient(3px 3px at 20px 30px, rgba(203, 213, 224, 0.8), transparent),
+        radial-gradient(3px 3px at 40px 70px, rgba(203, 213, 224, 0.6), transparent),
+        radial-gradient(2px 2px at 90px 40px, rgba(203, 213, 224, 0.9), transparent),
+        radial-gradient(3px 3px at 160px 120px, rgba(203, 213, 224, 0.7), transparent);
+    }
+  </style>
 </head>
-<body>
+<body class="era-dbs">
 
-<h1>A State of Mind (Ultra Instinct)</h1>
-<pre>[QUIET CHANNEL] 19:19 — Tournament of Power arena
-Thought steps aside. Movements arrive exactly when needed. The body listens to the
-fight without me in the way.
-</pre>
+<div class="container">
+  <div class="page-content">
+    
+    <h1 style="color: var(--ultra-silver);">A State of Mind</h1>
+    <h2 style="color: var(--text-muted); margin-top: calc(var(--space-sm) * -1);">Ultra Instinct</h2>
 
-<p>
-  Training Log — Ultra Instinct isn’t louder power. It’s better silence. Trust the
-  training until trust becomes action.
-</p>
+    <div class="scouter-log scroll-reveal" style="border-left-color: var(--ultra-silver);">
+      [QUIET CHANNEL] 19:19 — Tournament of Power arena<br>
+      Thought steps aside. Movements arrive EXACTLY when needed.<br>
+      Status: The body listens to the fight without him in the way.
+    </div>
 
-<ul>
-  <li><strong>Phases</strong>: Sign (black hair) → Mastered (silver hair/eyes)</li>
-  <li><strong>Focus</strong>: Autonomous offense/defense; calm state</li>
-  <li><strong>Note</strong>: Hard to sustain; demands perfect mind-body alignment</li>
-</ul>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        I don't find Ultra Instinct. It finds me in the moment when I should have died. 
+        Pushed past every limit, broken beyond repair, my body simply... moves. Without 
+        my permission. Without my thoughts.
+      </p>
+      <p>
+        Jiren's attacks miss by millimeters. Not because I'm fast, but because I'm not 
+        <em>there</em> to get hit. The mind creates delay; the body knows better.
+      </p>
+    </div>
 
-<p>
-  <strong>Final Note:</strong> This transformation is the culmination of all my years of training—every technique, every form, every lesson learned distilled into pure instinct. It's not just power; it's the body remembering everything the mind has taught it.
-</p>
+    <div class="transformation-display scroll-reveal delay-2">
+      <div class="transformation-image">
+        <img src="images/ultra-instinct.jpg" alt="Silver eyes, halo of soft light in Ultra Instinct composure">
+        <div class="aura-effect" style="box-shadow: 0 0 60px rgba(203, 213, 224, 0.8), 0 0 120px rgba(203, 213, 224, 0.5);"></div>
+      </div>
+      <figcaption>Action without hesitation.</figcaption>
+    </div>
 
+    <button class="btn btn-transform scroll-reveal delay-3" data-transform="ultra-instinct" onclick="this.classList.toggle('active'); document.body.classList.toggle('ui-active');">
+      ✨ Achieve Ultra Instinct
+    </button>
 
+    <div class="card scroll-reveal delay-3" style="border-left-color: var(--ultra-silver);">
+      <h3 style="color: var(--ultra-silver);">Transformation Data</h3>
+      <ul class="stats-list">
+        <li><strong>Sign Phase</strong> — Black hair, silver eyes, defensive autonomy</li>
+        <li><strong>Mastered Phase</strong> — Silver hair/eyes, full offensive + defensive autonomy</li>
+        <li><strong>Nature</strong> — Not a transformation, but a <em>state</em> of being</li>
+        <li><strong>Difficulty</strong> — Angels take millions of years to master this</li>
+      </ul>
+    </div>
 
-<figure>
-  <img src="images/ultra-instinct.jpg" alt="Silver eyes, halo of soft light—Ultra Instinct composure.">
-  <figcaption>Action without hesitation.</figcaption>
-</figure>
+    <div class="card scroll-reveal delay-4" style="background: linear-gradient(135deg, rgba(203, 213, 224, 0.1), transparent);">
+      <h3>The Ultimate State</h3>
+      <p>
+        Ultra Instinct isn't louder power. It's better silence. The culmination of 
+        everything, every technique, every form, every lesson, distilled into pure instinct.
+      </p>
+      <p>
+        Whis has been trying to teach me this all along. "Move without thinking." 
+        I thought it was about speed. It's about <strong>trust</strong>. Trust the 
+        training until trust becomes action.
+      </p>
+    </div>
 
-<hr>
+    <div class="training-log scroll-reveal" style="background: linear-gradient(135deg, rgba(203, 213, 224, 0.2), transparent); border: 1px solid var(--ultra-silver);">
+      <p style="font-size: 1.1rem; color: var(--ultra-silver);">
+        <strong>Final Note:</strong>
+      </p>
+      <p>
+        This is the summit, for now. But if I've learned anything across all these forms, 
+        all these battles, all these years... it's that there's always another level.
+      </p>
+      <p>
+        The journey doesn't end. Neither do I.
+      </p>
+      <p style="text-align: right; color: var(--text-muted); margin-bottom: 0;">
+        — Son Goku
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="dbs.html">Back to DBS Era</a></li>
-  <li><a href="ssb-kaioken.html">Previous: SSB Kaioken</a></li>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-</ul>
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">TRANSFORMATION POWER</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="100"></div>
+      </div>
+    </div>
 
+    <a href="index.html" class="btn btn-continue scroll-reveal" style="background: linear-gradient(135deg, var(--ultra-silver), #A0AEC0);">
+      Return to the Hub
+    </a>
+
+    <div class="card scroll-reveal text-center" style="margin-top: var(--space-lg); background: transparent; border: 1px dashed var(--text-muted);">
+      <p style="color: var(--text-muted); margin-bottom: var(--space-sm);">
+        🎮 Want to experience the journey again?
+      </p>
+      <a href="intro.html" class="btn" style="background: transparent; border: 2px solid var(--db-orange); color: var(--db-orange);">
+        Start from the Beginning
+      </a>
+    </div>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="dbs.html">← Back to DBS Era</a></li>
+        <li><a href="ssb-kaioken.html">Previous: SSB Kaioken</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="intro.html">Restart Journey</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

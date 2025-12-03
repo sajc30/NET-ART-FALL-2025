@@ -2,46 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Three-Minute Form — SSJ3</title>
+  <title>The Three-Minute Form — Super Saiyan 3</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.ssj3-active {
+      --era-primary: #FFD700;
+      --era-glow: 0 0 50px rgba(255, 215, 0, 0.8);
+    }
+    body.ssj3-active .transformation-image img {
+      box-shadow: 
+        0 0 30px rgba(255, 215, 0, 0.9),
+        0 0 60px rgba(255, 215, 0, 0.7),
+        0 0 90px rgba(255, 215, 0, 0.5);
+      animation: ssj3Lightning 0.1s infinite;
+    }
+    @keyframes ssj3Lightning {
+      0%, 100% {
+        box-shadow: 
+          0 0 30px rgba(255, 215, 0, 0.9),
+          0 0 60px rgba(255, 215, 0, 0.7),
+          0 0 90px rgba(255, 215, 0, 0.5),
+          -8px -8px 20px rgba(135, 206, 250, 0.9),
+          8px 8px 20px rgba(135, 206, 250, 0.9),
+          0 -15px 25px rgba(173, 216, 230, 0.7);
+      }
+      20% {
+        box-shadow: 
+          0 0 35px rgba(255, 215, 0, 1),
+          0 0 70px rgba(255, 215, 0, 0.85),
+          0 0 100px rgba(255, 215, 0, 0.65),
+          15px -10px 25px rgba(173, 216, 230, 1),
+          -10px 15px 12px rgba(135, 206, 250, 0.5),
+          12px 12px 18px rgba(255, 255, 255, 0.8);
+      }
+      40% {
+        box-shadow: 
+          0 0 30px rgba(255, 215, 0, 0.9),
+          0 0 60px rgba(255, 215, 0, 0.7),
+          0 0 90px rgba(255, 215, 0, 0.5),
+          -15px 8px 22px rgba(135, 206, 250, 1),
+          10px -15px 15px rgba(173, 216, 230, 0.6),
+          -8px -12px 20px rgba(255, 255, 255, 0.7);
+      }
+      60% {
+        box-shadow: 
+          0 0 40px rgba(255, 215, 0, 1),
+          0 0 75px rgba(255, 215, 0, 0.9),
+          0 0 110px rgba(255, 215, 0, 0.7),
+          8px 15px 28px rgba(173, 216, 230, 1),
+          -18px -8px 18px rgba(135, 206, 250, 0.8),
+          15px -10px 22px rgba(255, 255, 255, 0.9);
+      }
+      80% {
+        box-shadow: 
+          0 0 30px rgba(255, 215, 0, 0.9),
+          0 0 60px rgba(255, 215, 0, 0.7),
+          0 0 90px rgba(255, 215, 0, 0.5),
+          -12px 12px 20px rgba(135, 206, 250, 0.9),
+          18px 5px 25px rgba(173, 216, 230, 1),
+          -5px 18px 15px rgba(255, 255, 255, 0.6);
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="era-dbz">
 
-<h1>The Three-Minute Form (Super Saiyan 3)</h1>
-<pre>[SENSOR NOTE] 03:57 — Energy readouts unstable
-SSJ3 engaged. Output: overwhelming. Timer starts the moment I breathe. Fun while it
-lasts; dangerous when it doesn’t.
-</pre>
+<div class="container">
+  <div class="page-content">
+    
+    <h1 style="color: var(--ssj-gold);">The Three-Minute Form</h1>
+    <h2 style="color: var(--text-muted); margin-top: calc(var(--space-sm) * -1);">Super Saiyan 3</h2>
 
-<p>
-  Training Log — This is raw output attached to a fuse. Good for stalling, scaring,
-  or buying time for others. Not a home.
-</p>
+    <div class="scouter-log scroll-reveal" style="border-left-color: var(--ssj-gold);">
+      [SENSOR NOTE] 03:57 — Energy readouts UNSTABLE<br>
+      SSJ3 engaged. Output: OVERWHELMING. Timer starts the moment I breathe.<br>
+      Warning: Stamina drain CRITICAL. Recommend disengagement.
+    </div>
 
-<ul>
-  <li><strong>Use Case</strong>: Shock value; short engagements (Majin Buu arc)</li>
-  <li><strong>Tradeoff</strong>: Stamina collapse, heavy drain</li>
-  <li><strong>Lesson</strong>: Power needs efficiency to last</li>
-</ul>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        I found this form in the afterlife, training where time moves differently. 
+        When I first show it to Majin Buu, the Earth shakes. Oceans part. The sky 
+        darkens under the weight of my aura.
+      </p>
+      <p>
+        But there's a catch. A big one. <strong>This form burns through energy like nothing 
+        else.</strong> Three minutes feels like three seconds when every heartbeat costs 
+        a mountain of stamina.
+      </p>
+    </div>
 
+    <div class="transformation-display scroll-reveal delay-2">
+      <div class="transformation-image">
+        <img src="images/ssj3.jpg" alt="Long-maned golden form radiating overwhelming energy in SSJ3">
+        <div class="aura-effect" style="box-shadow: 0 0 60px rgba(255, 215, 0, 0.8), 0 0 120px rgba(255, 215, 0, 0.5);"></div>
+      </div>
+      <figcaption>Brute output with a timer attached.</figcaption>
+    </div>
 
+    <button class="btn btn-transform scroll-reveal delay-3" data-transform="ssj3" onclick="this.classList.toggle('active'); document.body.classList.toggle('ssj3-active');">
+      ⚡⚡⚡ Push to SSJ3
+    </button>
 
-<figure>
-  <img src="images/ssj3.jpg" alt="Long-maned golden form radiating overwhelming energy—SSJ3.">
-  <figcaption>Brute output with a timer attached.</figcaption>
-</figure>
+    <div class="card scroll-reveal delay-3" style="border-left-color: var(--ssj-gold);">
+      <h3 style="color: var(--ssj-gold);">Transformation Data</h3>
+      <ul class="stats-list">
+        <li><strong>Traits</strong> — Floor-length golden hair, no eyebrows, immense aura</li>
+        <li><strong>Power</strong> — 4x SSJ2 (400x base strength)</li>
+        <li><strong>Weakness</strong> — Catastrophic stamina drain</li>
+        <li><strong>Use Case</strong> — Shock value; short engagements only</li>
+      </ul>
+    </div>
 
-<hr>
+    <div class="card scroll-reveal delay-4" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), transparent);">
+      <h3>The Lesson</h3>
+      <p>
+        SSJ3 taught me something important: <strong>raw power isn't the answer.</strong> 
+        I could be the strongest person in the universe for three minutes and then 
+        collapse while my enemy still stands.
+      </p>
+      <p>
+        The next evolution wouldn't come from pushing harder. It would come from 
+        training smarter. From finding power that doesn't burn itself out.
+      </p>
+      <p style="color: var(--text-muted);">
+        That answer came from the gods themselves...
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="dbz.html">Back to DBZ Era</a></li>
-  <li><a href="ssj2.html">Previous: Super Saiyan 2</a> | <a href="dbs.html">Next Era: Dragon Ball Super</a></li>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-</ul>
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">TRANSFORMATION POWER</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="70"></div>
+      </div>
+    </div>
 
+    <a href="dbs.html" class="btn btn-continue scroll-reveal">
+      Continue to Dragon Ball Super Era
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="dbz.html">← Back to DBZ Era</a></li>
+        <li><a href="ssj2.html">Previous: SSJ2</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="ssg.html">Next: Super Saiyan God →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

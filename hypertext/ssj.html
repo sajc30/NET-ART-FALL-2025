@@ -4,45 +4,140 @@
   <meta charset="UTF-8">
   <title>The Golden Warrior — Super Saiyan</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.ssj-active {
+      --era-primary: #FFD700;
+      --era-glow: 0 0 30px rgba(255, 215, 0, 0.6);
+    }
+    body.ssj-active .transformation-image img {
+      box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.9),
+        0 0 40px rgba(255, 215, 0, 0.7),
+        0 0 60px rgba(255, 215, 0, 0.5);
+      animation: ssjFlame 0.5s ease-in-out infinite;
+    }
+    @keyframes ssjFlame {
+      0%, 100% {
+        box-shadow: 
+          0 0 20px rgba(255, 215, 0, 0.9),
+          0 0 40px rgba(255, 215, 0, 0.7),
+          0 0 60px rgba(255, 215, 0, 0.5);
+      }
+      25% {
+        box-shadow: 
+          0 0 25px rgba(255, 215, 0, 1),
+          0 0 50px rgba(255, 200, 0, 0.8),
+          0 0 75px rgba(255, 180, 0, 0.6),
+          0 -10px 40px rgba(255, 150, 0, 0.4);
+      }
+      50% {
+        box-shadow: 
+          0 0 30px rgba(255, 215, 0, 1),
+          0 0 55px rgba(255, 215, 0, 0.85),
+          0 0 80px rgba(255, 200, 0, 0.65);
+      }
+      75% {
+        box-shadow: 
+          0 0 25px rgba(255, 215, 0, 1),
+          0 0 45px rgba(255, 190, 0, 0.8),
+          0 0 70px rgba(255, 170, 0, 0.6),
+          0 -8px 35px rgba(255, 140, 0, 0.5);
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="era-dbz">
 
-<h1>The Golden Warrior (Super Saiyan)</h1>
-<pre>[NAMEK FIELD LOG] 17:41 — Gravity heavy, ocean winds
-Event: Krillin falls. Signal inside spikes. Hair ignites gold. Noise becomes focus.
-Power estimate: beyond previous ceilings.
-</pre>
+<div class="container">
+  <div class="page-content">
+    
+    <h1 style="color: var(--ssj-gold);">The Golden Warrior</h1>
+    <h2 style="color: var(--text-muted); margin-top: calc(var(--space-sm) * -1);">Super Saiyan</h2>
 
-<p>
-  Training Log — Grief hardens into intent. The world narrows to a line I refuse
-  to cross again. The golden current is not rage alone; it’s the promise I make to
-  my friends.
-</p>
+    <div class="scouter-log scroll-reveal" style="border-left-color: var(--ssj-gold);">
+      [NAMEK FIELD LOG] 17:41 — Gravity heavy, ocean winds<br>
+      Event: Krillin falls. Signal inside SPIKES. Hair ignites GOLD.<br>
+      Power estimate: BEYOND PREVIOUS CEILINGS. Scouter: DESTROYED.
+    </div>
 
-<ul>
-  <li><strong>Moment</strong>: First Super Saiyan on Namek vs. Frieza</li>
-  <li><strong>Traits</strong>: Golden hair/teal eyes; explosive, focused aura</li>
-  <li><strong>Impact</strong>: Opens the path to higher states</li>
-</ul>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        Krillin is dead. Frieza laughs. And something inside me <em>breaks</em>. Not my spirit, 
+        but a wall I didn't know existed. Grief hardens into intent. The world narrows to 
+        a single line I refuse to cross again.
+      </p>
+      <p>
+        My hair rises. Golden light erupts from my body. My eyes turn teal, and I see 
+        everything clearly for the first time. <strong>I am the Super Saiyan.</strong>
+      </p>
+    </div>
 
+    <div class="transformation-display scroll-reveal delay-2">
+      <div class="transformation-image">
+        <img src="images/ssj.jpg" alt="Golden aura erupts during first Super Saiyan transformation">
+        <div class="aura-effect" style="box-shadow: 0 0 50px rgba(255, 215, 0, 0.6), 0 0 100px rgba(255, 215, 0, 0.4);"></div>
+      </div>
+      <figcaption>Threshold crossed. Legend awakened.</figcaption>
+    </div>
 
+    <button class="btn btn-transform scroll-reveal delay-3" data-transform="ssj" onclick="this.classList.toggle('active'); document.body.classList.toggle('ssj-active');">
+      ⚡ Transform to Super Saiyan
+    </button>
 
-<figure>
-  <img src="images/ssj.jpg" alt="Golden aura erupts—first Super Saiyan transformation.">
-  <figcaption>Threshold crossed.</figcaption>
-</figure>
+    <div class="card scroll-reveal delay-3" style="border-left-color: var(--ssj-gold);">
+      <h3 style="color: var(--ssj-gold);">Transformation Data</h3>
+      <ul class="stats-list">
+        <li><strong>Trigger</strong> — Intense emotional response (usually rage or grief)</li>
+        <li><strong>Traits</strong> — Golden hair, teal eyes, explosive golden aura</li>
+        <li><strong>Power</strong> — 50x base strength</li>
+        <li><strong>Impact</strong> — Opens the path to all higher Saiyan forms</li>
+      </ul>
+    </div>
 
-<hr>
+    <div class="card scroll-reveal delay-4" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), transparent);">
+      <h3>The Legend</h3>
+      <p>
+        For a thousand years, Saiyans spoke of a legendary warrior who would arise, a Super 
+        Saiyan of pure, overwhelming power. Frieza feared this legend so much he destroyed 
+        our entire planet to prevent it.
+      </p>
+      <p>
+        He was right to be afraid.
+      </p>
+      <p style="color: var(--text-muted);">
+        The golden current is not rage alone; it's the promise I make to my friends. 
+        No one else dies today.
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="dbz.html">Back to DBZ Era</a></li>
-  <li><a href="kaioken.html">Previous: Kaioken</a> | <a href="ssj2.html">Next: Super Saiyan 2</a></li>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-</ul>
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">TRANSFORMATION POWER</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="45"></div>
+      </div>
+    </div>
 
+    <a href="ssj2.html" class="btn btn-continue scroll-reveal">
+      Continue to Super Saiyan 2
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="dbz.html">← Back to DBZ Era</a></li>
+        <li><a href="kaioken.html">Previous: Kaioken</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="ssj2.html">Next: SSJ2 →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

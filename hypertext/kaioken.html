@@ -4,44 +4,138 @@
   <meta charset="UTF-8">
   <title>Pushing Past the Limit — Kaioken</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.kaioken-active {
+      --era-primary: #E53E3E;
+      --era-glow: 0 0 30px rgba(229, 62, 62, 0.6);
+    }
+    body.kaioken-active .transformation-image img {
+      box-shadow: 
+        0 0 20px rgba(229, 62, 62, 0.9),
+        0 0 40px rgba(229, 62, 62, 0.7),
+        0 0 60px rgba(229, 62, 62, 0.5);
+      animation: kaiokenStrain 0.2s infinite;
+    }
+    @keyframes kaiokenStrain {
+      0%, 100% {
+        box-shadow: 
+          0 0 20px rgba(229, 62, 62, 0.9),
+          0 0 40px rgba(229, 62, 62, 0.7),
+          0 0 60px rgba(229, 62, 62, 0.5);
+      }
+      25% {
+        box-shadow: 
+          0 0 30px rgba(229, 62, 62, 1),
+          0 0 55px rgba(255, 100, 100, 0.85),
+          0 0 80px rgba(229, 62, 62, 0.65),
+          inset 0 0 20px rgba(255, 0, 0, 0.3);
+      }
+      50% {
+        box-shadow: 
+          0 0 25px rgba(229, 62, 62, 0.95),
+          0 0 45px rgba(229, 62, 62, 0.75),
+          0 0 70px rgba(229, 62, 62, 0.55);
+      }
+      75% {
+        box-shadow: 
+          0 0 35px rgba(255, 50, 50, 1),
+          0 0 60px rgba(229, 62, 62, 0.9),
+          0 0 90px rgba(229, 62, 62, 0.7),
+          inset 0 0 25px rgba(255, 0, 0, 0.4);
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="era-dbz">
 
-<h1>Pushing Past the Limit (Kaioken)</h1>
-<pre>[KING KAI LINKED] 09:03 — Planet Kai training field
-Protocol: Kaio-ken. Multipliers authorized: x2 → x4 (higher unsafe).
-Vitals: pulse redlining; bones protest. Benefit: immediate.
-</pre>
+<div class="container">
+  <div class="page-content">
+    
+    <h1 style="color: var(--db-red);">Pushing Past the Limit</h1>
+    <h2 style="color: var(--text-muted); margin-top: calc(var(--space-sm) * -1);">Kaioken</h2>
 
-<p>
-  Training Log — Power borrowed at interest. The red aura answers fast, but the
-  bill comes due faster. Use it when people need seconds I don’t have.
-</p>
+    <div class="scouter-log scroll-reveal" style="border-left-color: var(--db-red);">
+      [KING KAI LINKED] 09:03 — Planet Kai training field<br>
+      Protocol: Kaio-ken. Multipliers authorized: x2 → x4 (higher UNSAFE).<br>
+      Vitals: pulse redlining; bones protest. Benefit: IMMEDIATE.
+    </div>
 
-<ul>
-  <li><strong>Type</strong>: Technique (stackable), not a permanent form</li>
-  <li><strong>Edge</strong>: Instant multiplier; turns survival into timing</li>
-  <li><strong>Cost</strong>: Strain, injury, loss of control if pushed too far</li>
-</ul>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        King Kai taught me this on his tiny planet, running from a monkey and catching a 
+        grasshopper. The technique is simple: multiply your power. The catch? Your body 
+        pays interest on every second.
+      </p>
+      <p>
+        <strong>Kaio-ken!</strong> The red aura ignites. Time slows down. I can see openings 
+        that weren't there before. But I feel my muscles screaming, my bones bending under 
+        the pressure of my own power.
+      </p>
+    </div>
 
+    <div class="transformation-display scroll-reveal delay-2">
+      <div class="transformation-image">
+        <img src="images/kaioken.jpg" alt="Goku strains as red aura ignites during Kaioken activation">
+        <div class="aura-effect" style="box-shadow: 0 0 50px rgba(229, 62, 62, 0.6), 0 0 100px rgba(229, 62, 62, 0.4);"></div>
+      </div>
+      <figcaption>Borrowed power, borrowed time.</figcaption>
+    </div>
 
+    <button class="btn btn-transform scroll-reveal delay-3" data-transform="kaioken" onclick="this.classList.toggle('active'); document.body.classList.toggle('kaioken-active');">
+      🔴 Activate Kaioken
+    </button>
 
-<figure>
-  <img src="images/kaioken.jpg" alt="Goku strains as red aura ignites—Kaioken activation.">
-  <figcaption>Borrowed power, borrowed time.</figcaption>
-</figure>
+    <div class="card scroll-reveal delay-3" style="border-left-color: var(--db-red);">
+      <h3 style="color: var(--db-red);">Technique Data</h3>
+      <ul class="stats-list">
+        <li><strong>Type</strong> — Technique (stackable), not a permanent form</li>
+        <li><strong>Multipliers</strong> — x2, x3, x4, x10, x20 (increasingly dangerous)</li>
+        <li><strong>Edge</strong> — Instant power boost; turns survival into timing</li>
+        <li><strong>Cost</strong> — Severe strain, injury, potential death if pushed too far</li>
+      </ul>
+    </div>
 
-<hr>
+    <div class="card scroll-reveal delay-4" style="background: linear-gradient(135deg, rgba(229, 62, 62, 0.1), transparent);">
+      <h3>The Gamble</h3>
+      <p>
+        Against Vegeta, I pushed it to x4. Against Frieza, I screamed x20 and felt my body 
+        nearly tear apart. But that's the point. Kaioken is for moments when people need 
+        seconds I don't have.
+      </p>
+      <p style="color: var(--text-muted);">
+        This technique teaches me that power can be borrowed, but the bill always comes due. 
+        Later, I'll combine it with something divine...
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="dbz.html">Back to DBZ Era</a></li>
-  <li><a href="ssj.html">Next: The Golden Warrior (Super Saiyan)</a></li>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-</ul>
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">TRANSFORMATION POWER</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="30"></div>
+      </div>
+    </div>
 
+    <a href="ssj.html" class="btn btn-continue scroll-reveal">
+      Continue to Super Saiyan
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="dbz.html">← Back to DBZ Era</a></li>
+        <li><a href="great-ape.html">Previous: Great Ape</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="ssj.html">Next: Super Saiyan →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

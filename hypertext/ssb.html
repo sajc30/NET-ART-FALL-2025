@@ -2,46 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Surpassing the Gods — SSB Blue</title>
+  <title>Surpassing the Gods — Super Saiyan Blue</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.ssb-active {
+      --era-primary: #4299E1;
+      --era-glow: 0 0 40px rgba(66, 153, 225, 0.7);
+    }
+    body.ssb-active .transformation-image img {
+      box-shadow: 
+        0 0 20px rgba(66, 153, 225, 0.9),
+        0 0 40px rgba(66, 153, 225, 0.7),
+        0 0 60px rgba(66, 153, 225, 0.5);
+      animation: ssbCalm 2s ease-in-out infinite;
+    }
+    @keyframes ssbCalm {
+      0%, 100% {
+        box-shadow: 
+          0 0 20px rgba(66, 153, 225, 0.9),
+          0 0 40px rgba(66, 153, 225, 0.7),
+          0 0 60px rgba(66, 153, 225, 0.5);
+      }
+      25% {
+        box-shadow: 
+          0 0 25px rgba(66, 153, 225, 1),
+          0 0 50px rgba(100, 180, 255, 0.8),
+          0 0 75px rgba(66, 153, 225, 0.6),
+          0 0 100px rgba(135, 206, 250, 0.3);
+      }
+      50% {
+        box-shadow: 
+          0 0 30px rgba(100, 180, 255, 1),
+          0 0 55px rgba(66, 153, 225, 0.85),
+          0 0 85px rgba(135, 206, 250, 0.65),
+          0 0 115px rgba(66, 153, 225, 0.4);
+      }
+      75% {
+        box-shadow: 
+          0 0 25px rgba(66, 153, 225, 1),
+          0 0 45px rgba(135, 206, 250, 0.8),
+          0 0 70px rgba(66, 153, 225, 0.6),
+          0 0 95px rgba(100, 180, 255, 0.35);
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="era-dbs">
 
-<h1>Surpassing the Gods (Super Saiyan Blue)</h1>
-<pre>[KI LOG] 14:02 — Training field
-Blue settles where red once burned. Breath smooth. Movements draw smaller circles.
-Leaks close. Output holds.
-</pre>
+<div class="container">
+  <div class="page-content">
+    
+    <h1 style="color: var(--divine-blue);">Surpassing the Gods</h1>
+    <h2 style="color: var(--text-muted); margin-top: calc(var(--space-sm) * -1);">Super Saiyan Blue</h2>
 
-<p>
-  Training Log — This is god ki with manners. The color is calm, the edge is sharp.
-  It’s the form I use when the fight is long and the stakes stay high.
-</p>
+    <div class="scouter-log scroll-reveal" style="border-left-color: var(--divine-blue);">
+      [KI LOG] 14:02 — Training field<br>
+      Blue settles where red once burned. Energy signature: DIVINE + SAIYAN.<br>
+      Control: EXCEPTIONAL. Output: SUSTAINED. Leaks: MINIMAL.
+    </div>
 
-<ul>
-  <li><strong>Use</strong>: Everyday pinnacle in Super-era battles</li>
-  <li><strong>Traits</strong>: Blue hair/aura; precision and stamina</li>
-  <li><strong>Note</strong>: Plays well with techniques… if the body can take it</li>
-</ul>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        Months of training with Whis, the angel. Learning to stay calm while fighting. 
+        Learning to think before I move, and then to not think at all. The answer was 
+        combining two things I'd already achieved: Super Saiyan + Super Saiyan God.
+      </p>
+      <p>
+        The result is <strong>Super Saiyan Blue</strong>, god ki wrapped in the legendary 
+        golden form, but refined into something colder, cleaner, more controlled.
+      </p>
+    </div>
 
+    <div class="transformation-display scroll-reveal delay-2">
+      <div class="transformation-image">
+        <img src="images/ssb.jpg" alt="Blue aura settles into poised control in Super Saiyan Blue">
+        <div class="aura-effect" style="box-shadow: 0 0 50px rgba(66, 153, 225, 0.7), 0 0 100px rgba(66, 153, 225, 0.5);"></div>
+      </div>
+      <figcaption>Composure as a technique.</figcaption>
+    </div>
 
+    <button class="btn btn-transform scroll-reveal delay-3" data-transform="ssb" onclick="this.classList.toggle('active'); document.body.classList.toggle('ssb-active');">
+      💎 Transform to Blue
+    </button>
 
-<figure>
-  <img src="images/ssb.jpg" alt="Blue aura settles into poised control—Super Saiyan Blue.">
-  <figcaption>Composure as a technique.</figcaption>
-</figure>
+    <div class="card scroll-reveal delay-3" style="border-left-color: var(--divine-blue);">
+      <h3 style="color: var(--divine-blue);">Transformation Data</h3>
+      <ul class="stats-list">
+        <li><strong>Also Known As</strong> — Super Saiyan God Super Saiyan (SSGSS)</li>
+        <li><strong>Traits</strong> — Blue hair/aura, calm demeanor, precise movements</li>
+        <li><strong>Advantage</strong> — Combines god ki efficiency with Saiyan power</li>
+        <li><strong>Note</strong> — Works well with techniques... if the body can take it</li>
+      </ul>
+    </div>
 
-<hr>
+    <div class="card scroll-reveal delay-4" style="background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), transparent);">
+      <h3>The Everyday Pinnacle</h3>
+      <p>
+        This becomes my standard form for serious fights in the Super era. Unlike SSJ3, 
+        I can hold this without burning out. Unlike SSG, it carries the explosive power 
+        of the Super Saiyan transformation.
+      </p>
+      <p>
+        Blue is god ki with manners. The color is calm, the edge is sharp. It's the 
+        form I use when the fight is long and the stakes stay high.
+      </p>
+      <p style="color: var(--text-muted);">
+        But sometimes... even this isn't enough. Sometimes you need one more push.
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="dbs.html">Back to DBS Era</a></li>
-  <li><a href="ssg.html">Previous: Super Saiyan God</a> | <a href="ssb-kaioken.html">Next: SSB Kaioken</a></li>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-</ul>
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">TRANSFORMATION POWER</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="90"></div>
+      </div>
+    </div>
 
+    <a href="ssb-kaioken.html" class="btn btn-continue scroll-reveal">
+      Continue to SSB Kaioken
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="dbs.html">← Back to DBS Era</a></li>
+        <li><a href="ssg.html">Previous: SSG</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="ssb-kaioken.html">Next: SSB Kaioken →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

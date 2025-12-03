@@ -4,44 +4,153 @@
   <meta charset="UTF-8">
   <title>A Divine Gamble — SSB Kaioken</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.ssbkk-active {
+      --era-primary: #9F7AEA;
+      --era-glow: 0 0 50px rgba(159, 122, 234, 0.7);
+    }
+    body.ssbkk-active .transformation-image img {
+      box-shadow: 
+        0 0 20px rgba(66, 153, 225, 0.9),
+        0 0 40px rgba(229, 62, 62, 0.7),
+        0 0 60px rgba(159, 122, 234, 0.5);
+      animation: ssbkkChaos 0.15s infinite;
+    }
+    @keyframes ssbkkChaos {
+      0%, 100% {
+        box-shadow: 
+          0 0 20px rgba(66, 153, 225, 0.9),
+          0 0 40px rgba(229, 62, 62, 0.7),
+          0 0 60px rgba(159, 122, 234, 0.5);
+      }
+      20% {
+        box-shadow: 
+          0 0 30px rgba(229, 62, 62, 1),
+          0 0 55px rgba(66, 153, 225, 0.85),
+          0 0 80px rgba(159, 122, 234, 0.65),
+          -10px 5px 25px rgba(229, 62, 62, 0.8),
+          10px -5px 25px rgba(66, 153, 225, 0.8);
+      }
+      40% {
+        box-shadow: 
+          0 0 25px rgba(159, 122, 234, 1),
+          0 0 50px rgba(229, 62, 62, 0.8),
+          0 0 75px rgba(66, 153, 225, 0.6),
+          8px 8px 20px rgba(229, 62, 62, 0.7),
+          -8px -8px 20px rgba(66, 153, 225, 0.7);
+      }
+      60% {
+        box-shadow: 
+          0 0 35px rgba(66, 153, 225, 1),
+          0 0 60px rgba(159, 122, 234, 0.9),
+          0 0 90px rgba(229, 62, 62, 0.7),
+          -12px -6px 30px rgba(229, 62, 62, 0.9),
+          12px 6px 30px rgba(66, 153, 225, 0.9);
+      }
+      80% {
+        box-shadow: 
+          0 0 28px rgba(229, 62, 62, 1),
+          0 0 52px rgba(66, 153, 225, 0.85),
+          0 0 78px rgba(159, 122, 234, 0.65),
+          6px -10px 22px rgba(66, 153, 225, 0.8),
+          -6px 10px 22px rgba(229, 62, 62, 0.8);
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="era-dbs">
 
-<h1>A Divine Gamble (SSB Kaioken)</h1>
-<pre>[LIMIT BREAK NOTE] 07:21 — Tournament stage
-Blue + Kaio-ken. Aura crossfades to violet. Power spikes clean, then tears at the
-edges. Worth it when one moment changes everything.
-</pre>
+<div class="container">
+  <div class="page-content">
+    
+    <h1 style="color: #9F7AEA;">A Divine Gamble</h1>
+    <h2 style="color: var(--text-muted); margin-top: calc(var(--space-sm) * -1);">Super Saiyan Blue Kaioken</h2>
 
-<p>
-  Training Log — The trick is control under crisis. Stack the technique only when
-  a single opening wins the match. Then stop.
-</p>
+    <div class="scouter-log scroll-reveal" style="border-left-color: #9F7AEA;">
+      [LIMIT BREAK NOTE] 07:21 — Tournament stage<br>
+      Blue + Kaio-ken STACKED. Aura crossfades to VIOLET.<br>
+      Warning: Power spike CLEAN, then tears at edges. Backlash: SEVERE.
+    </div>
 
-<ul>
-  <li><strong>Benefit</strong>: Sudden multiplier on top of SSB</li>
-  <li><strong>Risk</strong>: Severe physical/ki backlash if prolonged</li>
-  <li><strong>Use</strong>: Tournament clutch plays; short windows</li>
-</ul>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        Everyone thought Kaioken was obsolete after I achieved god forms. But I never 
+        stopped practicing. And then I realized: what if I stack them?
+      </p>
+      <p>
+        The calm of Blue is the key. SSJ was too wild, too emotional. Kaioken on top of 
+        that would tear me apart. But Blue's control creates the perfect foundation. 
+        <strong>Blue gives me the composure to survive what comes next.</strong>
+      </p>
+    </div>
 
+    <div class="transformation-display scroll-reveal delay-2">
+      <div class="transformation-image">
+        <img src="images/ssb-kaioken.jpg" alt="Blue aura overlaid by red flares in SSB Kaioken">
+        <div class="aura-effect" style="box-shadow: 0 0 50px rgba(159, 122, 234, 0.7), 0 0 100px rgba(159, 122, 234, 0.5);"></div>
+      </div>
+      <figcaption>Compound interest on risk.</figcaption>
+    </div>
 
+    <button class="btn btn-transform scroll-reveal delay-3" data-transform="ssb-kaioken" onclick="this.classList.toggle('active'); document.body.classList.toggle('ssbkk-active');">
+      💜 Stack Kaioken
+    </button>
 
-<figure>
-  <img src="images/ssb-kaioken.jpg" alt="Blue aura overlaid by red flares—SSB Kaioken.">
-  <figcaption>Compound interest on risk.</figcaption>
-</figure>
+    <div class="card scroll-reveal delay-3" style="border-left-color: #9F7AEA;">
+      <h3 style="color: #9F7AEA;">Transformation Data</h3>
+      <ul class="stats-list">
+        <li><strong>Formula</strong> — Super Saiyan Blue × Kaioken multiplier</li>
+        <li><strong>Multipliers Used</strong> — x10, x20 (against Hit, Jiren)</li>
+        <li><strong>Visual</strong> — Blue aura with red/violet crackling overlay</li>
+        <li><strong>Risk</strong> — Severe physical/ki backlash if prolonged</li>
+      </ul>
+    </div>
 
-<hr>
+    <div class="card scroll-reveal delay-4" style="background: linear-gradient(135deg, rgba(159, 122, 234, 0.1), transparent);">
+      <h3>The Clutch Play</h3>
+      <p>
+        This isn't a form for long fights. This is for <em>moments</em>. When Hit's Time 
+        Skip has me cornered. When Jiren's barrier seems unbreakable. When one opening 
+        is all I need.
+      </p>
+      <p>
+        The trick is control under crisis. Stack the technique only when a single opening 
+        wins the match. Then <em>stop</em> before the backlash catches up.
+      </p>
+      <p style="color: var(--text-muted);">
+        But even this has limits. For the ultimate challenge, I'd need something beyond 
+        technique. Something that doesn't rely on transformations at all...
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="dbs.html">Back to DBS Era</a></li>
-  <li><a href="ssb.html">Previous: Super Saiyan Blue</a> | <a href="ultra-instinct.html">Next: Ultra Instinct</a></li>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-</ul>
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">TRANSFORMATION POWER</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="95"></div>
+      </div>
+    </div>
 
+    <a href="ultra-instinct.html" class="btn btn-continue scroll-reveal">
+      Continue to Ultra Instinct
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="dbs.html">← Back to DBS Era</a></li>
+        <li><a href="ssb.html">Previous: SSB</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="ultra-instinct.html">Next: Ultra Instinct →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

@@ -2,32 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DB Era — Beginnings</title>
+  <title>Dragon Ball — Beginnings</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="era-db">
 
-<h1>Dragon Ball — Beginnings</h1>
-<p>
-  Training Log: I begin as a kid with a tail and a boundless appetite for challenge.
-  Friends, rivals, and the moon itself push me toward what I might become.
-</p>
+<div class="container">
+  <div class="page-content">
+    
+    <h1>Dragon Ball — Beginnings</h1>
 
-<h2>Moments</h2>
-<ul>
-  <li><a href="great-ape.html">The Beast Within (Great Ape)</a></li>
-</ul>
+    <div class="scouter-log scroll-reveal">
+      [EARTH SURFACE — MOUNT PAOZU]<br>
+      Subject: Young Goku. Tail intact. Power Level: Fluctuating.<br>
+      Status: Training with masters. Making friends. Searching for Dragon Balls.
+    </div>
 
-<hr>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        I begin as a kid with a tail and a boundless appetite: for food, for fights, for adventure. 
+        Grandpa Gohan taught me martial arts before he passed. Master Roshi pushed me harder. 
+        Krillin became my best friend and rival.
+      </p>
+      <p>
+        The world is full of mysteries: seven magic orbs that grant wishes, tournaments where 
+        the strongest gather, and a moon that calls to something deep inside me...
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-  <li><a href="dbz.html">Next Era: Dragon Ball Z</a></li>
-</ul>
+    <div class="card scroll-reveal delay-2">
+      <h2>The Era of Discovery</h2>
+      <p>
+        This is where it all starts. No aliens. No gods. Just a pure-hearted boy discovering 
+        that strength comes from pushing past what you thought was possible and from having 
+        people worth fighting for.
+      </p>
+      <ul class="stats-list">
+        <li><strong>Key Mentors</strong> — Grandpa Gohan, Master Roshi, Korin</li>
+        <li><strong>Key Rivals</strong> — Krillin, Tien, Piccolo</li>
+        <li><strong>Key Technique</strong> — Kamehameha</li>
+      </ul>
+    </div>
 
+    <h2 class="scroll-reveal delay-3">Transformations</h2>
+
+    <div class="card scroll-reveal delay-4" style="border-left: 4px solid var(--db-orange);">
+      <h3>🌙 The Beast Within</h3>
+      <p>
+        Under the full moon, something awakens. The tail isn't just for balance, it's a key 
+        that unlocks the Great Ape, a primal Saiyan form of devastating power and zero control.
+      </p>
+      <a href="great-ape.html" class="btn btn-transform" style="margin-top: var(--space-sm);">
+        Experience the Great Ape →
+      </a>
+    </div>
+
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">ERA POWER LEVEL</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="15"></div>
+      </div>
+    </div>
+
+    <a href="great-ape.html" class="btn btn-continue scroll-reveal">
+      Continue to Great Ape
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="origin.html">← Back to Origin Story</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="dbz.html">Next Era: DBZ →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

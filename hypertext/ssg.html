@@ -2,46 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>A Taste of Divinity — SSG</title>
+  <title>A Taste of Divinity — Super Saiyan God</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.ssg-active {
+      --era-primary: #FC8181;
+      --era-glow: 0 0 30px rgba(252, 129, 129, 0.6);
+    }
+    body.ssg-active .transformation-image img {
+      box-shadow: 
+        0 0 20px rgba(252, 129, 129, 0.9),
+        0 0 40px rgba(252, 129, 129, 0.7),
+        0 0 60px rgba(252, 129, 129, 0.5);
+      animation: ssgDivine 1.5s ease-in-out infinite;
+    }
+    @keyframes ssgDivine {
+      0%, 100% {
+        box-shadow: 
+          0 0 20px rgba(252, 129, 129, 0.9),
+          0 0 40px rgba(252, 129, 129, 0.7),
+          0 0 60px rgba(252, 129, 129, 0.5);
+      }
+      33% {
+        box-shadow: 
+          0 0 25px rgba(252, 129, 129, 1),
+          0 0 50px rgba(255, 100, 100, 0.8),
+          0 0 75px rgba(252, 129, 129, 0.6),
+          0 0 100px rgba(255, 150, 150, 0.3);
+      }
+      66% {
+        box-shadow: 
+          0 0 30px rgba(255, 100, 100, 1),
+          0 0 55px rgba(252, 129, 129, 0.85),
+          0 0 80px rgba(255, 120, 120, 0.65),
+          0 0 110px rgba(252, 129, 129, 0.35);
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="era-dbs">
 
-<h1>A Taste of Divinity (Super Saiyan God)</h1>
-<pre>[DIVINE SIGNAL] 22:18 — Sky above Capsule Corp
-Ritual complete. Ki feels thinner, cleaner. Heat narrows to a blade. Beerus smiles.
-He calls this “a start.”
-</pre>
+<div class="container">
+  <div class="page-content">
+    
+    <h1 style="color: var(--ssg-red);">A Taste of Divinity</h1>
+    <h2 style="color: var(--text-muted); margin-top: calc(var(--space-sm) * -1);">Super Saiyan God</h2>
 
-<p>
-  Training Log — The fire is quiet now. Strength without waste. Every motion has a
-  reason, and the reason is not anger.
-</p>
+    <div class="scouter-log scroll-reveal" style="border-left-color: var(--ssg-red);">
+      [DIVINE SIGNAL] 22:18 — Sky above Capsule Corp<br>
+      Ritual complete. Ki signature: UNRECOGNIZABLE. Divine wavelength detected.<br>
+      Subject: Son Goku. Status: Touched by godhood.
+    </div>
 
-<ul>
-  <li><strong>Moment</strong>: Battle of Gods — first taste of god ki</li>
-  <li><strong>Traits</strong>: Red hair, lean aura, efficient flow</li>
-  <li><strong>Path</strong>: Foundation for Super Saiyan Blue</li>
-</ul>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        Beerus, the God of Destruction, came to Earth looking for the "Super Saiyan God" 
+        from his prophetic dream. We had no idea what that meant until Shenron revealed 
+        an ancient ritual.
+      </p>
+      <p>
+        Five pure-hearted Saiyans pour their energy into a sixth. Vegeta, Gohan, Goten, 
+        Trunks, and even my unborn grandchild through Videl... they give me everything. 
+        And I become something <em>new</em>.
+      </p>
+    </div>
 
+    <div class="transformation-display scroll-reveal delay-2">
+      <div class="transformation-image">
+        <img src="images/ssg.jpg" alt="Lean red aura in Super Saiyan God stance">
+        <div class="aura-effect" style="box-shadow: 0 0 50px rgba(252, 129, 129, 0.6), 0 0 100px rgba(252, 129, 129, 0.4);"></div>
+      </div>
+      <figcaption>Different fuel, different rules.</figcaption>
+    </div>
 
+    <button class="btn btn-transform scroll-reveal delay-3" data-transform="ssg" onclick="this.classList.toggle('active'); document.body.classList.toggle('ssg-active');">
+      🔥 Ascend to God Form
+    </button>
 
-<figure>
-  <img src="images/ssg.jpg" alt="Lean red aura—Super Saiyan God stance.">
-  <figcaption>Different fuel, different rules.</figcaption>
-</figure>
+    <div class="card scroll-reveal delay-3" style="border-left-color: var(--ssg-red);">
+      <h3 style="color: var(--ssg-red);">Transformation Data</h3>
+      <ul class="stats-list">
+        <li><strong>Trigger</strong> — Saiyan ritual (or later, through training)</li>
+        <li><strong>Traits</strong> — Red hair, lean aura, efficient flow</li>
+        <li><strong>Ki Type</strong> — God Ki (undetectable by mortals)</li>
+        <li><strong>Feel</strong> — Strength without waste. Every motion has a reason.</li>
+      </ul>
+    </div>
 
-<hr>
+    <div class="card scroll-reveal delay-4" style="background: linear-gradient(135deg, rgba(252, 129, 129, 0.1), transparent);">
+      <h3>The New Paradigm</h3>
+      <p>
+        The fire is quiet now. SSJ3 roared and burned; this whispers and <em>cuts</em>. 
+        I'm actually thinner in this form. The power is compressed, refined. Beerus 
+        smiles and calls this "a start."
+      </p>
+      <p>
+        He's right. This is just the foundation. Through training with Whis, I learn 
+        to reach this state on my own and combine it with Super Saiyan to create 
+        something even more powerful.
+      </p>
+      <p style="color: var(--text-muted);">
+        God ki doesn't scream. It simply <em>is</em>.
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="dbs.html">Back to DBS Era</a></li>
-  <li><a href="ssb.html">Next: Surpassing the Gods (SSB Blue)</a></li>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-</ul>
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">TRANSFORMATION POWER</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="80"></div>
+      </div>
+    </div>
 
+    <a href="ssb.html" class="btn btn-continue scroll-reveal">
+      Continue to Super Saiyan Blue
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="dbs.html">← Back to DBS Era</a></li>
+        <li><a href="ssj3.html">Previous: SSJ3</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="ssb.html">Next: SSB →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

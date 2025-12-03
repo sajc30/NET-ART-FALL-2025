@@ -4,45 +4,125 @@
   <meta charset="UTF-8">
   <title>The Beast Within — Great Ape</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.greatape-active {
+      --era-primary: #E53E3E;
+      --era-glow: 0 0 40px rgba(229, 62, 62, 0.7);
+    }
+    body.greatape-active .transformation-image img {
+      box-shadow: 
+        0 0 25px rgba(229, 62, 62, 0.9),
+        0 0 50px rgba(247, 148, 29, 0.7),
+        0 0 75px rgba(229, 62, 62, 0.5);
+      animation: greatApePulse 0.8s ease-in-out infinite;
+    }
+    @keyframes greatApePulse {
+      0%, 100% {
+        box-shadow: 
+          0 0 25px rgba(229, 62, 62, 0.9),
+          0 0 50px rgba(247, 148, 29, 0.7),
+          0 0 75px rgba(229, 62, 62, 0.5);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 
+          0 0 40px rgba(229, 62, 62, 1),
+          0 0 70px rgba(247, 148, 29, 0.9),
+          0 0 100px rgba(229, 62, 62, 0.7),
+          0 0 130px rgba(139, 0, 0, 0.4);
+        transform: scale(1.02);
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="era-db">
 
-<h1>The Beast Within (Great Ape)</h1>
-<pre>[SCOUTER ONLINE] 00:12 — Mountain range, clear sky
-Subject: Kakarot (me). Tail intact. Moonlight intensity: max.
-Power estimate: climbing beyond readout. Control: slipping.
-</pre>
+<div class="container">
+  <div class="page-content">
+    
+    <h1>The Beast Within</h1>
+    <h2 style="color: var(--text-muted); margin-top: calc(var(--space-sm) * -1);">Great Ape Transformation</h2>
 
-<p>
-  Training Log — The tail remembers what the mind doesn't. Full moon hits and the
-  body writes its own story: bones stretch, voice becomes thunder. Friends call my
-  name from far below. I learn the first rule of power: control has a cost.
-</p>
+    <div class="scouter-log scroll-reveal">
+      [SCOUTER ONLINE] 00:12 — Mountain range, clear sky<br>
+      Subject: Kakarot. Tail intact. Moonlight intensity: MAX.<br>
+      Power estimate: climbing beyond readout. Control: SLIPPING.
+    </div>
 
-<ul>
-  <li><strong>Trigger</strong>: Full moon (or artificial moon) while tail is intact</li>
-  <li><strong>Counter</strong>: Remove tail or block the moonlight source</li>
-  <li><strong>Lesson</strong>: Strength without control can't protect anyone</li>
-</ul>
+    <div class="training-log scroll-reveal delay-1">
+      <p>
+        The tail remembers what the mind doesn't. Full moon hits and the body writes its 
+        own story: bones stretch, voice becomes thunder. Friends call my name from far 
+        below. I can't hear them over the roar.
+      </p>
+      <p>
+        This is the first lesson of power: <strong>strength without control can't protect anyone.</strong>
+        The Great Ape is raw Saiyan instinct: devastating, unstoppable, and blind to friend or foe.
+      </p>
+    </div>
 
+    <div class="transformation-display scroll-reveal delay-2">
+      <div class="transformation-image">
+        <img src="images/great-ape.jpg" alt="Silhouette of a towering Great Ape against the moon">
+        <div class="aura-effect"></div>
+      </div>
+      <figcaption>Moment of unintended transformation.</figcaption>
+    </div>
 
+    <button class="btn btn-transform scroll-reveal delay-3" data-transform="great-ape" onclick="this.classList.toggle('active'); document.body.classList.toggle('greatape-active');">
+      🌙 Unleash the Beast
+    </button>
 
-<figure>
-  <img src="images/great-ape.jpg" alt="Silhouette of a towering Great Ape against the moon.">
-  <figcaption>Moment of unintended transformation.</figcaption>
-</figure>
+    <div class="card scroll-reveal delay-3">
+      <h3 style="color: var(--db-orange);">Transformation Data</h3>
+      <ul class="stats-list">
+        <li><strong>Trigger</strong> — Full moon (or artificial moon) while tail is intact</li>
+        <li><strong>Power</strong> — 10x base strength, massive size increase</li>
+        <li><strong>Control</strong> — Almost none. Pure instinct takes over.</li>
+        <li><strong>Counter</strong> — Remove tail or block the moonlight source</li>
+      </ul>
+    </div>
 
-<hr>
+    <div class="card scroll-reveal delay-4" style="background: linear-gradient(135deg, rgba(247, 148, 29, 0.1), transparent);">
+      <h3>The Lesson</h3>
+      <p>
+        Years later, I lose my tail permanently. Part of me misses it, that raw, primal connection 
+        to my Saiyan blood. But the lesson stays: <em>power means nothing if you can't choose 
+        how to use it.</em>
+      </p>
+      <p style="color: var(--text-muted);">
+        This transformation teaches me the cost of strength. Every form after this, I'll fight 
+        for control first, power second.
+      </p>
+    </div>
 
-<h3>Navigate</h3>
-<ul>
-  <li><a href="db.html">Back to DB Era</a></li>
-  <li><a href="dbz.html">Next Era: DBZ</a></li>
-  <li><a href="index.html">Back to Hub</a></li>
-  <li>Era Menu: <a href="db.html">DB</a> | <a href="dbz.html">DBZ</a> | <a href="dbs.html">DBS</a></li>
-</ul>
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal">
+      <div class="power-meter-label">TRANSFORMATION POWER</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="20"></div>
+      </div>
+    </div>
 
+    <a href="dbz.html" class="btn btn-continue scroll-reveal">
+      Continue to DBZ Era
+    </a>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="db.html">← Back to DB Era</a></li>
+        <li><a href="index.html">Hub</a></li>
+        <li><a href="kaioken.html">Next: Kaioken →</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-

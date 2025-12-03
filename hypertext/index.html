@@ -4,37 +4,79 @@
   <meta charset="UTF-8">
   <title>The Journey of Son Goku — Hub</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="era-db">
 
-<h1>The Journey of Son Goku</h1>
-<h2>A Hypertext Narrative</h2>
-<p>
-  A link-driven narrative tracing Goku's evolving power and mindset, inviting you to
-  choose paths through pivotal transformations. The structure mirrors his constant ascent.
-</p>
+<div class="container">
+  <div class="page-content">
+    
+    <h1>The Journey of Son Goku</h1>
+    <p class="intro-subtitle" style="text-align: center; margin-bottom: var(--space-lg);">
+      A Hypertext Narrative — Choose Your Path
+    </p>
 
-<hr>
+    <div class="training-log scroll-reveal">
+      <p>
+        This hub connects all points in Goku's journey. Each era represents a chapter in his 
+        endless pursuit of strength, not for its own sake, but to protect the people he loves.
+      </p>
+      <p style="color: var(--text-muted); margin-bottom: 0;">
+        New here? <a href="intro.html">Start from the beginning</a> to understand the world first.
+      </p>
+    </div>
 
-<h2>Choose an Era</h2>
-<ul>
-  <li><a href="db.html">Dragon Ball (Beginnings)</a></li>
-  <li><a href="dbz.html">Dragon Ball Z (Pushing Limits)</a></li>
-  <li><a href="dbs.html">Dragon Ball Super (Beyond Mortal)</a></li>
-  <li><a href="index.html">Restart at Hub</a></li>
-  <li><a href="toc.html">Jump to a Transformation</a> (quick index)</li>
-  </ul>
+    <h2 class="scroll-reveal delay-1">Choose an Era</h2>
 
-<hr>
+    <div class="card scroll-reveal delay-2" style="border-left: 4px solid var(--db-orange);">
+      <h3 style="color: var(--db-orange);">🌅 Dragon Ball — Beginnings</h3>
+      <p>
+        A boy with a tail discovers martial arts, friendship, and the primal power hidden 
+        under the full moon. Innocence meets instinct.
+      </p>
+      <a href="db.html" class="btn" style="margin-top: var(--space-sm);">Enter DB Era →</a>
+    </div>
 
-<h3>How to Navigate</h3>
-<p>
-  Each page includes a small navigation block with links to the hub, the era menu, and
-  previous/next within the era. Major milestone pages also include an explicit option to
-  return here to try a different route.
-  </p>
+    <div class="card scroll-reveal delay-3" style="border-left: 4px solid var(--ssj-gold);">
+      <h3 style="color: var(--ssj-gold);">⚡ Dragon Ball Z — Pushing Limits</h3>
+      <p>
+        Alien invaders. Galactic tyrants. Androids. Each threat demands more than Goku thought 
+        possible. The legend of the Super Saiyan awakens.
+      </p>
+      <a href="dbz.html" class="btn" style="margin-top: var(--space-sm); background: linear-gradient(135deg, var(--ssj-gold), #CC9900);">Enter DBZ Era →</a>
+    </div>
 
+    <div class="card scroll-reveal delay-4" style="border-left: 4px solid var(--divine-blue);">
+      <h3 style="color: var(--divine-blue);">✨ Dragon Ball Super — Beyond Mortal</h3>
+      <p>
+        Gods enter the arena. Universes hang in the balance. Goku discovers that true 
+        strength lies in calm, a power beyond power.
+      </p>
+      <a href="dbs.html" class="btn" style="margin-top: var(--space-sm); background: linear-gradient(135deg, var(--divine-blue), #2B6CB0);">Enter DBS Era →</a>
+    </div>
+
+    <!-- Power Meter -->
+    <div class="power-meter scroll-reveal" style="margin-top: var(--space-lg);">
+      <div class="power-meter-label">OVERALL JOURNEY PROGRESS</div>
+      <div class="power-meter-bar">
+        <div class="power-meter-fill" data-power="0"></div>
+      </div>
+    </div>
+
+    <!-- Subtle Navigation -->
+    <nav class="nav-bottom">
+      <h3>Quick Links</h3>
+      <ul class="nav-links">
+        <li><a href="intro.html">← New Here? Start from Intro</a></li>
+        <li><a href="origin.html">Saiyan Backstory</a></li>
+        <li><a href="toc.html">Transformation Index</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<div class="energy-particles"></div>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-
