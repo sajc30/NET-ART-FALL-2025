@@ -6,6 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageTransitions();
 });
 
+// Fix for back/forward cache (BFCache): when returning via browser back button,
+// the page may be restored with body opacity still at 0 from our transition.
+window.addEventListener('pageshow', (event) => {
+  const navEntries = (performance && performance.getEntriesByType)
+    ? performance.getEntriesByType('navigation')
+    : [];
+  const navType = navEntries[0]?.type;
+  const isBackForward = event.persisted || navType === 'back_forward';
+
+  if (!isBackForward) return;
+
+  // Force the page visible immediately.
+  document.body.style.transition = 'opacity 0s';
+  document.body.style.opacity = '1';
+  // Allow future transitions to work normally.
+  setTimeout(() => {
+    document.body.style.transition = '';
+  }, 0);
+});
+
 function initScrollReveal() {
   const revealElements = document.querySelectorAll('.scroll-reveal');
   

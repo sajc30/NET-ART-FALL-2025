@@ -503,7 +503,7 @@ li strong {
 .dragon-ball::after {
   content: '★';
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #8B0000;
